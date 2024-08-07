@@ -15,9 +15,8 @@ bool PetrolEngine::invalidGear(int gear) {
 }
 
 void PetrolEngine::changeGear(int gear) {
-    if (invalidGear(gear)) {        
-        currentGear_ = gear;  
-        std::cout << currentGear_ << " | ";     
+    if (invalidGear(gear)) {
+        currentGear_ = gear;
     } else {
         throw InvalidGear("Wrong Gear!!!");
     }

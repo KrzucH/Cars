@@ -30,7 +30,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
 
 enable_testing()
 
-add_executable(hello_test tests.cpp ${SRC_LIST})
+add_executable(hello_test add_test.cpp ${SRC_LIST})
 target_link_libraries(hello_test  GTest::gtest_main)
 
 include(GoogleTest)

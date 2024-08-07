@@ -3,7 +3,7 @@
 
 PetrolEngine::PetrolEngine(int power, float capacity, int gears)
     : power_(power), capacity_(capacity), gears_(gears), currentGear_(0) {
-    std::cout << __FUNCTION__ << std::endl;
+    // std::cout << __FUNCTION__ << std::endl;
 }
 
 bool PetrolEngine::invalidGear(int gear) {
@@ -16,13 +16,13 @@ bool PetrolEngine::invalidGear(int gear) {
 
 void PetrolEngine::changeGear(int gear) {
     if (invalidGear(gear)) {        
-        currentGear_ = gear;
-        std::cout << currentGear_ << '\n';
+        currentGear_ = gear;  
+        std::cout << currentGear_ << " | ";     
     } else {
         throw InvalidGear("Wrong Gear!!!");
     }
     // TODO: Add checking if gear is between -1 and gears_
     // -1 is for REAR
     // 0 is for NEUTRAL
-    std::cout << __FUNCTION__ << std::endl;
+    // std::cout << __FUNCTION__ << std::endl;
 }
